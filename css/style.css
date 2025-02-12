@@ -1,0 +1,235 @@
+/* ========================================
+    RESET GENERAL
+======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ========================================
+    ESTILO GENERAL DEL CUERPO
+======================================== */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+p {
+    color: #333;
+    font-size: 12px;
+}
+
+/* ========================================
+    ENCABEZADO (HEADER)
+======================================== */
+header {
+    background-color: #ffe50a;
+    color: rgb(0, 0, 0);
+    padding: 0px 100px;
+    
+}
+
+header div {
+    display: flex;
+}
+
+.menu nav {
+    display: flex; /* Habilitar Flexbox */
+    padding: 10px 0px;
+    justify-content: left
+}
+/* Menús generales */
+.disney img {
+    height: 50px;
+}
+
+/* Estilo al pasar el mouse */
+.menu a:hover {
+    color: #007bff; /* Cambiar el color al pasar el mouse */
+}
+
+.cuenta {
+    justify-content: left; /* Cambiar el color al pasar el mouse */
+    margin-left: 250px;
+}
+
+/* ========================================
+    NAVEGACIÓN (MENÚ)
+======================================== */
+/* Contenedor principal del menú */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Elementos del menú principal */
+nav ul li {
+    position: relative; /* Necesario para posicionar el submenú */
+    margin: 0 15px;
+}
+
+/* Enlaces del menú principal */
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 12px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover en los enlaces principales */
+nav ul li a:hover {
+    color: #1d00f6;
+}
+
+/* Estilo del submenú */
+nav ul li ul {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute;
+    top: 100%; /* Alinea el submenú debajo del elemento principal */
+    left: 0;
+    background-color: #5e5e5e;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Elementos del submenú */
+nav ul li ul li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Enlaces del submenú */
+nav ul li ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.categorias li a:hover {
+    background-color: #0bb2f4;
+    color: #ffffff; 
+}
+/* Muestra el submenú al pasar el mouse por el elemento principal */
+nav ul li:hover > ul {
+    display: block;
+}
+ 
+  /* Contenedor de las imágenes (en fila) */
+  .slides {
+    display: flex;
+    animation: slide 15s infinite;
+  }
+  
+  /* Cada slide ocupa el 100% del contenedor */
+  .slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+  }
+  
+  /* Animación para mover las imágenes */
+  @keyframes slide {
+    0% {
+      transform: translateX(0%); /* Primera imagen visible */
+    }
+    25% {
+      transform: translateX(-100%); /* Segunda imagen visible */
+    }
+    50% {
+      transform: translateX(-200%); /* Tercera imagen visible */
+    }
+    75% {
+      transform: translateX(-300%); /* Cuarta imagen visible */
+    }
+    100% {
+      transform: translateX(0%); /* Regresa a la primera imagen */
+    }
+  }
+  
+  /* Estilo para el contenedor de las tarjetas */
+.tarjetas-contenedor {
+    display: flex; /* Coloca las tarjetas en una fila */
+    gap: 20px; /* Espacio entre tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    flex-wrap: wrap; /* Permite que las tarjetas se acomoden en otra fila si no caben */
+    padding: 20px;
+  }
+  
+  /* Estilo para cada tarjeta */
+  .tarjeta {
+    width: 300px; /* Tamaño de cada tarjeta */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+    padding: 15px;
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efecto hover en cada tarjeta */
+  .tarjeta:hover {
+    transform: translateY(-5px); /* Levanta ligeramente la tarjeta */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+  }
+  
+  /* Estilo para la imagen dentro de la tarjeta */
+  .tarjeta img {
+    width: 60%; /* La imagen ocupa todo el ancho de la tarjeta */
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para el título */
+  .tarjeta h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para la descripción */
+  .tarjeta p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo para el botón */
+  .tarjeta button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tarjeta button:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+  }
+  
