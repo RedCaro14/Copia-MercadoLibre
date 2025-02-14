@@ -87,7 +87,7 @@ nav ul li a:hover {
 nav ul li ul {
   display: none; /* Oculta el submenú por defecto */
   position: absolute; /* Posiciona el submenú en relación al elemento padre */
-  z-index: 10; /* Asegura que el submenú esté por encima */
+  z-index: 10;/* Asegura que el submenú esté por encima */
   top: 100%; /* Alinea el submenú debajo del elemento principal */
   left: 0; /* Alinea el submenú al lado izquierdo */
   background-color: #5e5e5e; /* Fondo gris oscuro */
@@ -112,9 +112,7 @@ nav ul li:hover > ul {
   display: block; /* Muestra el submenú al pasar el mouse por el padre */
 }
 
-  .slider {
-    overflow: hidden;
-  }
+ 
   /* Contenedor de las imágenes (en fila) */
   .slides {
     display: flex;
